@@ -4,7 +4,7 @@
 ![Schema](https://lh3.googleusercontent.com/SO3mb-jdBf0IBy-jZ3Z__VdX4AJkwiOfuUG4bX2oaEIMi6Bwcv0qXuTLCWrYujgFP-XZY_E-SZ6CZ3cgCdMHY4ygDpN2dWnuEZic0qiz3iuA86WV-bFjIIVZVyI85gOzlQGhAgtixbjcbFQaLN4Z5pBCAh9cW9nWR2PWs3zQdVxNpV1P9ySTHhnREW8EhgDELfHFMsbAZzNNOP7yhL7SP_jM-jX5AMQGp-M8X5TT6gpLlYKCw5NCvPTaQ9BiGI--WT22u8UpHAMdxFHo5kZDI2r9oqP3KY2zGpUkarksp-MIsIDMjYxsrv0n7_Sr66vYYUjoP16VihuTtVfgqlp-_kKqOIwNonif8ZRQFfkoQjj5jpDjG1AeRE9Nlml3DC6tbKah1crLOU0ywYTRao8v1UN2NnWj3kAFNFf9h5QeZi0kizcBofCAwm_dBuor7bXLnUAlgmpf5O4BJVh4b7fjzSnch3tfG3fYESnwp-45ON2-SbferWKxN7d7r9KV3zDFFUZ5lI9-IaLKsVQSBl7UWSSwGmffu_vcMlMyUxdBFp3QrNXScc7AR2nnwiOBDCY3I_ih9il0TRVkCy6HXPm5PmsoDfYUOo-B541WkQeMvJ9XoNKOy4QOJasGxlP1wAAOSBW7z__ps4RTmhqW14cYXX1EwpVrq6mIvV9uwYdh3_qXH8BCum_jZzc=w487-h188-no)
 
 ## 2.How to run the assignment <br/>
-1.Create a virtual environment: `virtualenv p python .`<br/>
+1.Create a virtual environment: `virtualenv -p python .`<br/>
 2.To start the virtual environment: `source bin/activate`<br/>
 3.Installing the dependencies: `pip install -r requirements.txt`<br/>
 4.Migrations: `python manage.py makemigrations`, `python manage.py migrate`<br/>
