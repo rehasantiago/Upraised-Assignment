@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from jobs.views import upload
+from jobs.views import upload,jobs,job_search
 
 urlpatterns = [ 
     path('admin/', admin.site.urls),
-    path('upload/',upload,name="upload")
+    path('upload/',upload,name="upload"),
+    path('jobs/<str:value>/',jobs,name="jobs"),
+    path('startdate/<int:year1>-<int:month1>-<int:day1>-<int:hour1>-<int:minute1>-<int:second1>/enddate/<int:year2>-<int:month2>-<int:day2>-<int:hour2>-<int:minute2>-<int:second2>/',job_search,name="job_search")
 ]

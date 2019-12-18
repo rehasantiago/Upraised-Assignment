@@ -6,6 +6,12 @@ from django.contrib.auth.decorators import permission_required
 from .models import Skill
 from .skills_extraction import Skill_extract
 import datetime
+from django.db.models import Q
+from django.http import HttpResponse,JsonResponse
+from django.core import serializers
+from datetime import date
+from dateutil.relativedelta import relativedelta
+import json
 # Create your views here.
 
 def date_convertor(s):
@@ -51,3 +57,27 @@ def upload(request):
             ) 
     context={}
     return render(request,template,context)
+
+def jobs(request,value):
+    data = Skill.objects.filter(created_date__month__gte=datetime.datetime.today().month-1).filter(Q(title__icontains=value) | Q(skills_required__icontains=value) | Q(description__icontains=value))
+    return HttpResponse(serializers.serialize("json", data), content_type="text/json-comment-filtered")
+
+def job_search(request,**kwargs):
+    d1=datetime.datetime(kwargs['year1'],kwargs['month1'],kwargs['day1'],kwargs['hour1'],kwargs['minute1'],kwargs['second1'])
+    d2=datetime.datetime(kwargs['year2'],kwargs['month2'],kwargs['day2'],kwargs['hour2'],kwargs['minute2'],kwargs['second2'])
+    if(d1<datetime.datetime.today() - datetime.timedelta(days=30)):
+        d1=datetime.datetime.today() - datetime.timedelta(days=30)
+    print(d1)
+    data1 = json.loads(serializers.serialize("json",Skill.objects.filter(created_date__range=[d1,d2])))
+    data2 = json.loads(serializers.serialize("json",Skill.objects.filter(created_date__range=[d1,d2]).order_by('title')))
+    data3 = json.loads(serializers.serialize("json",Skill.objects.filter(created_date__range=[d1,d2]).order_by('company')))
+    skills_json={}
+    for skill in ['sales skills','math','punctuality','negotiation skills','communication','problem solving','management','structured thinking','prioritization','finance','data modeling and analysis','basic tools of product management','understanding of technical concepts','marketing','sports and outdoors','organizational abilities','disabled veteran and minority']:
+        skills_json[skill]=json.loads(serializers.serialize("json",Skill.objects.filter(created_date__range=[d1,d2]).filter(skills_required__icontains=skill)))
+    data={
+        "total jobs":data1,
+        "grouped by title":data2,
+        "grouped by company":data3,
+        "grouped by skill":skills_json
+    }
+    return JsonResponse(data)
