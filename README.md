@@ -21,9 +21,14 @@
 ### 1.Job Search <br/>
 1.You can now open the API in your browser at `localhost:[port]/jobs/<value>` <br/>
 2.This API takes in the value of the skill or title of the required jobs <br/>
+3.It returns a list in which each list item is a dictionary of job<br/>
 **Below**:*Screenshot of the API*
+![Job Search](https://lh3.googleusercontent.com/wVfDB_-axCCO_PEFv5yxx2viKe87v9DgMvCOdq5s21N1k-kAzP2fdMTCGScSHaPJK0GuALXD-jBm9xDUTsPvHxedkaxbCy8FT8jXYa6xE3Z-eawz935yPw8unROwle62MTqj6PNksbYNdQEWYjMb-304kTnzSfqb3213ndNY0DK3JmXQaRktmT-z1jL9zSJvhfCMllMRCyjb9eFSnKjjST0R6WGL5JBYWVz67noWiyKJ2Azgr_2TMftjqWPIXDf2XH3JZi4neguF9oGmzL1fS9ntqS9LQ5QsvHdxD0YUKQmHuzyYGs6L20R4XpZJ9EkMY55h8NtZYXeb3SpQAxEPLI-EDdNhBQWdmx4638iqeybBFS9BBZsbmrpIZ_BhRIr5lmR3pkt2YHN4NRMezznzXcmLBlnpZ0s-dFeAhHEi5H5f8uSw4vHJXaD4whRjSBgIQWQmgXZJon_JzYhwHJfreYTPRTw2sdgVBkY4y391dEyVkrRxejFCyXmpUzbxIiFoBENspUsuEL5Q8iOpkUdayVNtG3PK94xocSb1lW62w5Kc-flart5yKq_wAPBd_uWdc2m4NNOtqpjQibhTKTJPICbGGe-pDa7eTL0qct8sXgdIHM2427T2PCJh0-QaIfGLBY9OGfE3waMJjpzQb78tjSY6ZzrOMYIOVU9r6rpOxY-2UDQ8dg_BhVg=w874-h467-no)
+
 
 ### 2.Analytics
 1.You can now open the API in your browser at `localhost:[port]/startdate/<date>/enddate/<date>` <br/>
 2.This API takes in two values, the startdate and enddate which should be in year-month-day-hour-minute-second format<br/>
+3.It returns a dictionary with *total jobs*, *jobs grouped by title*, *jobs grouped by company* and *jobs grouped by skills* <br/>
 **Below**:*Screenshot of the API*
+![Analytics](https://lh3.googleusercontent.com/RT2XjlJauCZ9p1fJgim5kGOdAt6uLeUM1ybbR6Mpp38P4sSHizrk9VhgDHjSLCYYA8aI6oYEtgSlSOuBL2ghnuy82gWs4YQrFi6kOlzmkqBUggh46FbTM80KNWxnHkD6oPcOn0QmmAjiKxls2bFik-RcRP9dh_RNJMxKl9C9TTc4Jhswva1naUX9TmfO0K4JYVtJE5F8a0fXp4YUE5B14DEu4o5vz2D62JQF_XYioi9tf9wMGUmhr2wBc6YnPN03co_QvVAi-KDY_NA83NUXTpQF55ROrGF61MIn0cB3PkrP1nTjSrgyz65bFTtTMm-VKH_BJfLt4hCKsPqdixWLCrloYCMuueo5TRF1UZtCyl_pjkDqenMPhiq9XjG3A9qbVXY-3QPG91bg973xaNwyNpqRL_c0QQR-S9gRmIxYmmdZsoaavFK1hlZ1rFGTIvVK9fLqxRyNBMgTxiTbJbDB-WkRNSSWGrl-x9Qp0PNswTfU5nSBV25sdk51cNuIxH9gzJj5Gx4qemuQ_0gEYIYEVMHFMpqEgDeqbr3a-R4oNdTYteb2pfGSWcOz_9S4yn3HjpirY5EHjz2Lr7AQgt91Do8fJZr61wt7KmPnDGtHD6stBRsYWnVcFvO59GPcXgAXA61mhEfHTe1MOQMOfx4-CrLoo8azkthZBLuJ-yDAmAlWhyTCbz2Cetk=w824-h271-no)
